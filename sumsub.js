@@ -33,7 +33,7 @@ const getTokens = async (method, url) => {
  * @param url
  * @returns {Promise<any>}
  */
-const makeRequest = async (method, url) => {
+export const makeRequest = async (method, url) => {
   const config = await getTokens(method, url);
   try {
     const response = await axios.request({
@@ -147,4 +147,4 @@ const start = async () => {
   }))
 }
 
-export {start};
+export { start, makeRequest };
